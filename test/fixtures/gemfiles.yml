@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: gemfiles
+#
+#  id            :integer          not null, primary key
+#  repository_id :integer
+#  url           :text
+#  contents      :text
+#  last_checked  :datetime
+#  created_at    :datetime
+#  updated_at    :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  repository_id: 1
+  url: MyText
+  contents: MyText
+  last_checked: 2013-09-10 22:27:15
+
+two:
+  repository_id: 1
+  url: MyText
+  contents: MyText
+  last_checked: 2013-09-10 22:27:15

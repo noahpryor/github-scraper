@@ -1,0 +1,69 @@
+<%= form_for(@repository) do |f| %>
+  <% if @repository.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@repository.errors.count, "error") %> prohibited this repository from being saved:</h2>
+
+      <ul>
+      <% @repository.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :repository_url %><br>
+    <%= f.text_area :repository_url %>
+  </div>
+  <div class="field">
+    <%= f.label :last_created %><br>
+    <%= f.datetime_select :last_created %>
+  </div>
+  <div class="field">
+    <%= f.label :owner_name %><br>
+    <%= f.text_area :owner_name %>
+  </div>
+  <div class="field">
+    <%= f.label :first_created %><br>
+    <%= f.datetime_select :first_created %>
+  </div>
+  <div class="field">
+    <%= f.label :repo_size %><br>
+    <%= f.number_field :repo_size %>
+  </div>
+  <div class="field">
+    <%= f.label :repository_created %><br>
+    <%= f.datetime_select :repository_created %>
+  </div>
+  <div class="field">
+    <%= f.label :watchers %><br>
+    <%= f.number_field :watchers %>
+  </div>
+  <div class="field">
+    <%= f.label :forks %><br>
+    <%= f.text_area :forks %>
+  </div>
+  <div class="field">
+    <%= f.label :last_push %><br>
+    <%= f.text_area :last_push %>
+  </div>
+  <div class="field">
+    <%= f.label :feed_hits %><br>
+    <%= f.number_field :feed_hits %>
+  </div>
+  <div class="field">
+    <%= f.label :has_gemfile %><br>
+    <%= f.check_box :has_gemfile %>
+  </div>
+  <div class="field">
+    <%= f.label :gemfile_contents %><br>
+    <%= f.text_area :gemfile_contents %>
+  </div>
+  <div class="field">
+    <%= f.label :last_checked %><br>
+    <%= f.datetime_select :last_checked %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

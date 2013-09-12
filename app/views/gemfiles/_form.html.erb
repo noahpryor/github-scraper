@@ -1,0 +1,33 @@
+<%= form_for(@gemfile) do |f| %>
+  <% if @gemfile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gemfile.errors.count, "error") %> prohibited this gemfile from being saved:</h2>
+
+      <ul>
+      <% @gemfile.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :repository_id %><br>
+    <%= f.number_field :repository_id %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_area :url %>
+  </div>
+  <div class="field">
+    <%= f.label :contents %><br>
+    <%= f.text_area :contents %>
+  </div>
+  <div class="field">
+    <%= f.label :last_checked %><br>
+    <%= f.datetime_select :last_checked %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

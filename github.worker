@@ -1,0 +1,5 @@
+runtime "ruby"
+
+merge_gem 'rest-client'
+exec "getgems.rb"
+

@@ -1,0 +1,33 @@
+<h1>Listing gemfiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Url</th>
+      <th>Contents</th>
+      <th>Last checked</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gemfiles.each do |gemfile| %>
+      <tr>
+        <td><%= gemfile.repository_id %></td>
+        <td><%= gemfile.url %></td>
+        <td><%= gemfile.contents %></td>
+        <td><%= gemfile.last_checked %></td>
+        <td><%= link_to 'Show', gemfile %></td>
+        <td><%= link_to 'Edit', edit_gemfile_path(gemfile) %></td>
+        <td><%= link_to 'Destroy', gemfile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gemfile', new_gemfile_path %>

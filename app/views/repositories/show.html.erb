@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Repository url:</strong>
+  <%= @repository.repository_url %>
+</p>
+
+<p>
+  <strong>Last created:</strong>
+  <%= @repository.last_created %>
+</p>
+
+<p>
+  <strong>Owner name:</strong>
+  <%= @repository.owner_name %>
+</p>
+
+<p>
+  <strong>First created:</strong>
+  <%= @repository.first_created %>
+</p>
+
+<p>
+  <strong>Repo size:</strong>
+  <%= @repository.repo_size %>
+</p>
+
+<p>
+  <strong>Repository created:</strong>
+  <%= @repository.repository_created %>
+</p>
+
+<p>
+  <strong>Watchers:</strong>
+  <%= @repository.watchers %>
+</p>
+
+<p>
+  <strong>Forks:</strong>
+  <%= @repository.forks %>
+</p>
+
+<p>
+  <strong>Last push:</strong>
+  <%= @repository.last_push %>
+</p>
+
+<p>
+  <strong>Feed hits:</strong>
+  <%= @repository.feed_hits %>
+</p>
+
+<p>
+  <strong>Has gemfile:</strong>
+  <%= @repository.has_gemfile %>
+</p>
+
+<p>
+  <strong>Gemfile contents:</strong>
+  <%= @repository.gemfile_contents %>
+</p>
+
+<p>
+  <strong>Last checked:</strong>
+  <%= @repository.last_checked %>
+</p>
+
+<%= link_to 'Edit', edit_repository_path(@repository) %> |
+<%= link_to 'Back', repositories_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Repository:</strong>
+  <%= @gemfile.repository_id %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @gemfile.url %>
+</p>
+
+<p>
+  <strong>Contents:</strong>
+  <%= @gemfile.contents %>
+</p>
+
+<p>
+  <strong>Last checked:</strong>
+  <%= @gemfile.last_checked %>
+</p>
+
+<%= link_to 'Edit', edit_gemfile_path(@gemfile) %> |
+<%= link_to 'Back', gemfiles_path %>

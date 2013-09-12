@@ -1,0 +1,53 @@
+# == Schema Information
+#
+# Table name: repositories
+#
+#  id                 :integer          not null, primary key
+#  repository_url     :text
+#  last_created       :datetime
+#  owner_name         :text
+#  first_created      :datetime
+#  repo_size          :integer
+#  repository_created :datetime
+#  watchers           :integer
+#  forks              :text
+#  last_push          :text
+#  feed_hits          :integer
+#  has_gemfile        :boolean
+#  gemfile_contents   :text
+#  last_checked       :datetime
+#  created_at         :datetime
+#  updated_at         :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  repository_url: MyText
+  last_created: 2013-09-10 22:39:06
+  owner_name: MyText
+  first_created: 2013-09-10 22:39:06
+  repo_size: 1
+  repository_created: 2013-09-10 22:39:06
+  watchers: 1
+  forks: MyText
+  last_push: MyText
+  feed_hits: 1
+  has_gemfile: false
+  gemfile_contents: MyText
+  last_checked: 2013-09-10 22:39:06
+
+two:
+  repository_url: MyText
+  last_created: 2013-09-10 22:39:06
+  owner_name: MyText
+  first_created: 2013-09-10 22:39:06
+  repo_size: 1
+  repository_created: 2013-09-10 22:39:06
+  watchers: 1
+  forks: MyText
+  last_push: MyText
+  feed_hits: 1
+  has_gemfile: false
+  gemfile_contents: MyText
+  last_checked: 2013-09-10 22:39:06

@@ -1,0 +1,51 @@
+<h1>Listing repositories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Repository url</th>
+      <th>Last created</th>
+      <th>Owner name</th>
+      <th>First created</th>
+      <th>Repo size</th>
+      <th>Repository created</th>
+      <th>Watchers</th>
+      <th>Forks</th>
+      <th>Last push</th>
+      <th>Feed hits</th>
+      <th>Has gemfile</th>
+      <th>Gemfile contents</th>
+      <th>Last checked</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @repositories.each do |repository| %>
+      <tr>
+        <td><%= repository.repository_url %></td>
+        <td><%= repository.last_created %></td>
+        <td><%= repository.owner_name %></td>
+        <td><%= repository.first_created %></td>
+        <td><%= repository.repo_size %></td>
+        <td><%= repository.repository_created %></td>
+        <td><%= repository.watchers %></td>
+        <td><%= repository.forks %></td>
+        <td><%= repository.last_push %></td>
+        <td><%= repository.feed_hits %></td>
+        <td><%= repository.has_gemfile %></td>
+        <td><%= repository.gemfile_contents %></td>
+        <td><%= repository.last_checked %></td>
+        <td><%= link_to 'Show', repository %></td>
+        <td><%= link_to 'Edit', edit_repository_path(repository) %></td>
+        <td><%= link_to 'Destroy', repository, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Repository', new_repository_path %>
