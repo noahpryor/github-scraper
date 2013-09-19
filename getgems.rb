@@ -70,4 +70,4 @@ repositories.each do |repository|
   processed.push repository
 end
 
-RestClient.post("/gemfiles/update_multiple",{repositories: processed.to_json })
+RestClient.post("https://githubgems.herokuapp.com/gemfiles/update_multiple",{repositories: processed.to_json })

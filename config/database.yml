@@ -6,8 +6,8 @@
 development:
   adapter: postgresql
   database: githubscraper_dev
-  username: postgres
-  password: 
+  username: brightbox
+  password: be99bright
   pool: 5
   timeout: 5000
 
