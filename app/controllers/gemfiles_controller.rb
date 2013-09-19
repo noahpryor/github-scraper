@@ -1,11 +1,26 @@
 class GemfilesController < ApplicationController
-  before_action :set_gemfile, only: [:show, :edit, :update, :destroy]
+  #before_action :set_gemfile, only: [:show, :edit, :update, :destroy]
 
   # GET /gemfiles
   # GET /gemfiles.json
   def index
     @gemfiles = Gemfile.all
   end
+  def update_multiple
+    JSON.parse(params[:repositories]).each do |repo|
+      repository = Repository.find(repo["id"].to_i)
+      #repository.has_gemfile = repo["has_gemfile"] 
+      repository.last_checked = Time.now
+      repository.gemfile_contents = repo["gemfile_contents"] if repo["gemfile_contents"].present?
+      repository.save!
+    end
+    respond_to do |format|
+      format.json { render json: {message: "wooo"}.to_json}
+    end
+
+
+  end
+
 
   # GET /gemfiles/1
   # GET /gemfiles/1.json
@@ -69,6 +84,6 @@ class GemfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gemfile_params
-      params.require(:gemfile).permit(:repository_id, :url, :contents, :last_checked)
+     # params.require(:gemfile).permit(:repository_id, :url, :contents, :last_checked)
     end
 end

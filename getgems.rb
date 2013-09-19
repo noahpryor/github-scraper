@@ -70,4 +70,4 @@ repositories.each do |repository|
   processed.push repository
 end
 
-puts processed.inspect
+RestClient.post("/gemfiles/update_multiple",{repositories: processed.to_json })

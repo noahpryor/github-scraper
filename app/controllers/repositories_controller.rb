@@ -11,6 +11,10 @@ class RepositoriesController < ApplicationController
   # GET /repositories/1.json
   def show
   end
+  def update_multiple
+
+
+  end
 
   # GET /repositories/new
   def new
@@ -69,6 +73,6 @@ class RepositoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def repository_params
-      params.require(:repository).permit(:repository_url, :last_created, :owner_name, :first_created, :repo_size, :repository_created, :watchers, :forks, :last_push, :feed_hits, :has_gemfile, :gemfile_contents, :last_checked)
+     # params.require(:repository).permit(:repository_url, :last_created, :owner_name, :first_created, :repo_size, :repository_created, :watchers, :forks, :last_push, :feed_hits, :has_gemfile, :gemfile_contents, :last_checked)
     end
 end

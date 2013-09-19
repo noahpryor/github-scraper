@@ -1,7 +1,10 @@
 GithubScraper::Application.routes.draw do
   resources :repositories
 
-  resources :gemfiles
+  resources :gemfiles do 
+    match "update_multiple", on: :collection, via: [:get,:post]
+  end
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
